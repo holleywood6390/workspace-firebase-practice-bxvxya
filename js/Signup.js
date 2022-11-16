@@ -1,12 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyAzcwgZuLA7dO9g4sQhXQVTUgCo0M8m2qM",
-  authDomain: "grocerylist-91956.firebaseapp.com",
-  databaseURL: "https://grocerylist-91956.firebaseio.com",
-  projectId: "grocerylist-91956",
-  storageBucket: "grocerylist-91956.appspot.com",
-  messagingSenderId: "813812426276",
-  appId: "1:813812426276:web:93e5897af12892ff78dab1",
-  measurementId: "G-VZ83BTR72T"
+  apiKey: 'AIzaSyBi1bOI4QisA0--lADD75G4UKqVTOxGVAU',
+  authDomain: 'grocerylist2022-1d90c.firebaseapp.com',
+  projectId: 'grocerylist2022-1d90c',
+  storageBucket: 'grocerylist2022-1d90c.appspot.com',
+  messagingSenderId: '894021844553',
+  appId: '1:894021844553:web:f1bfb94a1eb32c7d930998',
+  measurementId: 'G-YTQY6KQ5JN',
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -16,8 +15,9 @@ $("#signup-form").submit(function(e) {
   e.preventDefault();
   // get the username(email) and password from the form
   // change the following code
-  var email = "yilianz4@gmail.com";
-  var password = "ddsgagafda";
+  var email = $('#email').val();
+  var password = $('#password').val();
+
 
   // create a user with email address and password
   firebase
@@ -36,4 +36,5 @@ $("#signup-form").submit(function(e) {
       console.log(error.code);
       console.log(errorMessage);
     });
+    //firebase.firestore().collection('signup').add()
 });
